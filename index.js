@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const app = express();
 app.use((req, res, next) => {
     // by default bodyParser leaks the whole error stack!
-    bodyParser.json()(req, res, (err) => {
+    bodyParser.json({ limit: 1000000 })(req, res, (err) => {
         if (err) {
             console.log(err);
             res.sendStatus(400);
