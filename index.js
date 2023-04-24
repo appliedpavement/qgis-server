@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 const ROOT_PATH = "/qgis";
 const DATA_PATH = "./data";
-const HOST_PATH = "http://localhost:3008/qgis"
+const HOST_PATH = "https://a.mjpdev.com/qgis"
 
 function ensureDataFolder() {
     const dataFolder = path.join(__dirname, DATA_PATH)
