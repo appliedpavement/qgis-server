@@ -96,7 +96,9 @@ app.get(`${ROOT_PATH}/plugins/:plugin`, (req, res) => {
     res.sendFile("plugin.zip", {
         root: path.join(__dirname, DATA_PATH, req.params.plugin)
     }, err => {
-        res.status(404).end("Plugin not found.");
+        if (err) {
+            res.status(404).end("Plugin not found.");
+        }
     });
 });
 
