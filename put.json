@@ -1,0 +1,12 @@
+{
+    "info": {
+        "name": "APT Tools",
+        "version": "0.1.100",
+        "description": "APT Tools for QGIS",
+        "homepage": "https://appliedpavement.com",
+        "qgis_minimum_version": "3.22.14",
+        "author_name": "Applied Pavement"
+    },
+    
+    "zip": "aGVsbG8K"
+}
