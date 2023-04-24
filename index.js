@@ -20,6 +20,15 @@ const ROOT_PATH = "/qgis";
 const DATA_PATH = "./data";
 const HOST_PATH = "http://localhost:3008/qgis"
 
+function ensureDataFolder() {
+    const dataFolder = path.join(__dirname, DATA_PATH)
+    if (!fs.existsSync(dataFolder)) {
+        fs.mkdirSync(dataFolder, { recursive: true });
+    }    
+}
+
+ensureDataFolder();
+
 async function readdir(path, options) {
     return new Promise((resolve, reject) => fs.readdir(path, options, (err, files) => {
         if (err) reject(err);
